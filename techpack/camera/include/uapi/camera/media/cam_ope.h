@@ -6,13 +6,8 @@
 #ifndef __UAPI_OPE_H__
 #define __UAPI_OPE_H__
 
-#ifdef OPLUS_FEATURE_CAMERA_COMMON
-#include <media/cam_defs.h>
-#include <media/cam_cpas.h>
-#else
 #include <camera/media/cam_defs.h>
 #include <camera/media/cam_cpas.h>
-#endif
 
 #define OPE_DEV_NAME_SIZE                  128
 
@@ -78,11 +73,7 @@
 #define OPE_MAX_IO_BUFS                     (OPE_OUT_RES_MAX + OPE_IN_RES_MAX)
 #define OPE_MAX_PASS                        1
 #define OPE_MAX_PLANES                      2
-#ifdef OPLUS_FEATURE_CAMERA_GUNNAR
-#define OPE_MAX_STRIPES                     48
-#else
 #define OPE_MAX_STRIPES                     64
-#endif
 #define OPE_MAX_BATCH_SIZE                  16
 
 /**
